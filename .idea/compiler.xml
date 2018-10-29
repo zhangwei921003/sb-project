@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-jdbc" />
+        <module name="springboot-mybatis" />
       </profile>
     </annotationProcessing>
   </component>

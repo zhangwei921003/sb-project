@@ -8,7 +8,6 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>com.purchasing</groupId>
@@ -17,7 +16,6 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>spring-jdbc</module>
+        <module>springboot-mybatis</module>
     </modules>
-
-
 </project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.purchasing.springbootmybatis.xml.MemberMapper">
+    <select id="selectById" parameterType="java.lang.Integer"
+            resultType="com.purchasing.springbootmybatis.xml.entity.Member">
+    select *  from t_member where id = #{id}
+  </select>
+</mapper>
