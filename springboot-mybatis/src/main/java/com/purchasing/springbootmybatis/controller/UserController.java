@@ -6,6 +6,8 @@ import com.purchasing.springbootmybatis.generator.entity.TMember;
 import com.purchasing.springbootmybatis.generator.entity.TUser;
 import com.purchasing.springbootmybatis.generator.mapper.TMemberMapper;
 import com.purchasing.springbootmybatis.generator.mapper.TUserMapper;
+import com.purchasing.springbootmybatis.xml.entity.Member;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,15 +25,16 @@ public class UserController {
    private UserMapper mapper;
 
    @Autowired
-   private TMemberMapper memberMapper;
+   private SqlSessionTemplate sqlSessionTemplate;
 
     @RequestMapping(value = "user/list")
     public User list(){
         return mapper.selectUserById(1);
     }
 
-    @RequestMapping(value = "user/member")
-    public TMember memberList(){
-        return memberMapper.selectByPrimaryKey(28);
+    @RequestMapping(value = "member/list")
+    public Member memberList(){
+        return sqlSessionTemplate.selectOne("com.purchasing.springbootmybatis.xml.MemberMapper.selectById",28);
     }
+
 }
