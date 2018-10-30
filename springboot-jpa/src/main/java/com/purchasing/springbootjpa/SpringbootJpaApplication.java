@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = "com.purchasing.springbootjpa.entity")
 public class SpringbootJpaApplication {
 
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootJpaApplication.class, args);
 	}
