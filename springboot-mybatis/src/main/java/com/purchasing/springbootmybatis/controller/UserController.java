@@ -9,6 +9,7 @@ import com.purchasing.springbootmybatis.generator.mapper.TUserMapper;
 import com.purchasing.springbootmybatis.xml.entity.Member;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,16 +26,31 @@ public class UserController {
    private UserMapper mapper;
 
    @Autowired
+   private TUserMapper userMapper;
+
+   @Autowired
+   private TMemberMapper tMemberMapper;
+
+   @Autowired
    private SqlSessionTemplate sqlSessionTemplate;
 
-    @RequestMapping(value = "user/list")
-    public User list(){
-        return mapper.selectUserById(1);
+    @RequestMapping(value = "user/{id}")
+    public User list(@PathVariable Integer id){
+        return mapper.selectUserById(id);
+    }
+
+    @RequestMapping(value = "member/{id}")
+    public Member memberList(@PathVariable Integer id){
+        return sqlSessionTemplate.selectOne("com.purchasing.springbootmybatis.xml.MemberMapper.selectById",id);
     }
 
     @RequestMapping(value = "member/list")
-    public Member memberList(){
-        return sqlSessionTemplate.selectOne("com.purchasing.springbootmybatis.xml.MemberMapper.selectById",28);
+    public List<TMember> selectAll(){
+        return tMemberMapper.selectAll();
     }
 
+    @RequestMapping(value = "user/list")
+    public List<TUser> selectUserAll(){
+        return userMapper.selectByExample(null);
+    }
 }
