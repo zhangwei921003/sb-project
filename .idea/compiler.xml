@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-jdbc" />
+        <module name="springboot-elasticsearch" />
         <module name="springboot-jpa" />
         <module name="springboot-mybatis" />
+        <module name="springboot-redis" />
       </profile>
     </annotationProcessing>
   </component>

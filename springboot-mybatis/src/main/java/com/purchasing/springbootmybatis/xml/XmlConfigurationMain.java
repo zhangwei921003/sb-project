@@ -11,6 +11,7 @@ import org.springframework.core.io.support.EncodedResource;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.HashMap;
 
 /**
  * @author zhangwei

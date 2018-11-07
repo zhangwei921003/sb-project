@@ -18,5 +18,7 @@
         <module>spring-jdbc</module>
         <module>springboot-mybatis</module>
         <module>springboot-jpa</module>
+        <module>springboot-elasticsearch</module>
+        <module>springboot-redis</module>
     </modules>
 </project>
