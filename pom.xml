@@ -20,5 +20,7 @@
         <module>springboot-jpa</module>
         <module>springboot-elasticsearch</module>
         <module>springboot-redis</module>
+        <module>springboot-kafka</module>
+        <module>springboot-validator</module>
     </modules>
 </project>
