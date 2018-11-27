@@ -22,5 +22,6 @@
         <module>springboot-redis</module>
         <module>springboot-kafka</module>
         <module>springboot-validator</module>
+        <module>springboot-unit-test</module>
     </modules>
 </project>
