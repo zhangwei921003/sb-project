@@ -9,8 +9,11 @@
         <module name="spring-jdbc" />
         <module name="springboot-elasticsearch" />
         <module name="springboot-jpa" />
+        <module name="springboot-kafka" />
         <module name="springboot-mybatis" />
         <module name="springboot-redis" />
+        <module name="springboot-unit-test" />
+        <module name="springboot-validator" />
       </profile>
     </annotationProcessing>
   </component>
